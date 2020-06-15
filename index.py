@@ -4,6 +4,7 @@ import os
 import pickle
 import re
 import time
+import random
 import requests
 
 UserAgent = 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.101 Mobile Safari/537.36'
@@ -134,6 +135,7 @@ def save_cookie():
 
 
 def main(event, context):
+    time.sleep(random.randint(0, 60))
     goodjob_refresh()
     job51_refresh()
     # save_cookie()
